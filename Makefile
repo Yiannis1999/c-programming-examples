@@ -1,4 +1,5 @@
 CC = gcc
+CFLAGS = -fmerge-constants -Wl,--unique=.rodata*
 LIBS = -lm
 SRCS = $(wildcard c/*.c)
 TARGETS = $(patsubst c/%.c,bin/%,$(SRCS))
